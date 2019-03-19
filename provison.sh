@@ -25,3 +25,5 @@ function run_scripts {
              log notice "Sucessfully configured"
          fi
 }
+
+run_scripts

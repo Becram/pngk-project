@@ -1,0 +1,32 @@
+{
+    "launcher": {
+            "EPaath": {
+                "DESCRIPTION": "E-Paath is a collection of digital interactive learning activities that are designed and developed at OLE Nepal and distributed freely. The E-Paath activities are based on national curriculum of Nepal",
+                "NAME": "EPaath",
+                "COMMAND": "chromium-browser http://localhost/epaath --allow-outdated-plugins --password-store=basic",
+                "ICON": "/usr/share/icons/EPaath.png",
+                "CATAGORY": "Education"
+              },
+            "Wikipedia": {
+                "NAME": "Wikipedia",
+                "DESCRIPTION": "Wikipedia is a free online encyclopedia, created and edited by volunteers around the world and hosted by the Wikimedia Foundation",
+                "COMMAND": "chromium-browser http://localhost:81",
+                "ICON": "/usr/share/icons/Wikipedia.png",
+                "CATAGORY": "Education"
+              },
+            "Kolibri": {
+                "NAME": "Kolibri",
+                "DESCRIPTION": "Kolibri is specially designed to provide offline access to a curated and openly licensed educational content library",
+                "COMMAND": "chromium-browser http://localhost:82",
+                "ICON": "/usr/share/icons/Kolibri.png",
+                "CATAGORY": "Education"
+              },
+            "PhET": {
+                "NAME": "PhET",
+                "DESCRIPTION": "PhET provides fun, free, interactive, research-based science and mathematics simulations. We extensively test and evaluate each simulation to ensure educational effectiveness. These tests include student interviews and observation of simulation use in classrooms. The simulations are written in Java, Flash or HTML5, and can be run online or downloaded to your computer.",
+                "COMMAND": "chromium-browser http://http://localhost:8080/learn/#/topics/197934f144305350b5820c7c4dd8e194",
+                "ICON": "/usr/share/icons/phet.png",
+                "CATAGORY": "Education"
+              }
+             }
+}	     
