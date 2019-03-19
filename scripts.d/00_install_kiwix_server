@@ -19,8 +19,10 @@ cp -r ./packages/*.bz2  $PKGS_DIR
 
 if [ -f "$PKGS_DIR"/kiwix-server-0.9-linux-armv5tejl.tar.bz2 ]; then
     cp -r  "$PKGS_DIR"/kiwix-server-0.9-linux-armv5tejl.tar.bz2 /tmp/
+    pushd /tmp
     tar -jxf kiwix-server-0.9-linux-armv5tejl.tar.bz2
     mv /tmp/kiwix* /var/
+    popd
     echo "${KIWIX_VER}" > /etc/kiwix-version 
     sudo rm -rf /tmp/* && sudo rm -rf /var/lib/apt/lists/* 
 else
