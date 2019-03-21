@@ -1,6 +1,8 @@
 #!/bin/bash
 
 set -e
+
+
 # file names & paths
 DATE=`date '+%Y%m%d'`
 SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )" 
@@ -22,6 +24,6 @@ do
   sed -i "s@{{CATAGORY}}@$(jq -r ".launcher.${launcher}.CATAGORY" $DATASET)@g" "${launcher}".desktop
   sed -i "s@{{ICON}}@$(jq -r ".launcher.${launcher}.ICON" $DATASET)@g" "${launcher}".desktop
   sed -i "s@{{COMMAND}}@$(jq -r ".launcher.${launcher}.COMMAND" $DATASET)@g" "${launcher}".desktop
-  mv -v "${launcher}".desktop "${DST}"
-  cp -rv ./"${IMAGE_DIR}"/*.png "${ICON_DST}"
+  mv "${launcher}".desktop "${DST}"
+  cp -r ./"${IMAGE_DIR}"/*.png "${ICON_DST}"
 done
