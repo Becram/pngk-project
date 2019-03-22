@@ -12,8 +12,9 @@ mkdir -p /tmp/epaath/
 if [ ! -f epaath-new.tar.gz ]; then
 	rm -rf /tmp/epaath && mkdir -p /tmp/epaath
     wget "$DOWNLOAD_FILE" 
-    tar -xf epaath-new.tar.gz -C /tmp/epaath/
+
 fi
+tar -xf epaath-new.tar.gz -C /tmp/epaath/
 
 
 if [ -f /var/www/html/index.html ]; then 
