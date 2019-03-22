@@ -6,3 +6,5 @@ source lib.sh
 log notice  "Installing Updates"
 _apt update || log error "Could not update package sources"
 _apt dist-upgrade || log error "Could not upgrade system"
+
+log notice  "Done!!   Installing Updates"

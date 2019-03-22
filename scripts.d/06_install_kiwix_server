@@ -1,17 +1,14 @@
 #!/bin/bash
 
-set -eux
+log notice  "Installing Kiwix"
 
 # variable declare
 DEBIAN_FRONTEND="noninteractive"
-RUNTIME_PKGS="curl bzip2 perl"
 PKGS_DIR=/packages
 KIWIX_VER=0.9
 ZIM_FILES=/kiwix-data
 LIBRARY_PATH=/library.xml
 
-#apt-get update -qq && apt-get upgrade -y --no-install-recommends && rm -rf /var/lib/apt/lists/*
-apt-get update -qq && apt-get install -y --no-install-recommends -qq ${RUNTIME_PKGS} 
 mkdir -p $PKGS_DIR
 cp -r ./packages/*.bz2  $PKGS_DIR
 
@@ -24,7 +21,6 @@ if [ -f "$PKGS_DIR"/kiwix-server-0.9-linux-armv5tejl.tar.bz2 ]; then
     mv /tmp/kiwix* /var/
     popd
     echo "${KIWIX_VER}" > /etc/kiwix-version 
- #   sudo rm -rf /tmp/* && sudo rm -rf /var/lib/apt/lists/* 
 else
 	echo "No kiwix tar file found in $PKGS_DIR "
 fi
@@ -42,4 +38,5 @@ do
   /var/kiwix-manage $LIBRARY_PATH add $f
 done
 
+log notice  "Done installing Kiwix"
 

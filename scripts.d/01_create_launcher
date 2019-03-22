@@ -12,6 +12,7 @@ LAUNCHERS=("EPaath" "Wikipedia" "Kolibri" "PhET")
 DATASET="dataset.json"
 DST="/usr/share/applications"
 ICON_DST="/usr/share/icons"
+log notice  "Creating launchers"
 
 
 for launcher in "${LAUNCHERS[@]}"
@@ -27,3 +28,6 @@ do
   mv "${launcher}".desktop "${DST}"
   cp -r ./"${IMAGE_DIR}"/*.png "${ICON_DST}"
 done
+
+
+log notice  "Done!!  Creating launchers"

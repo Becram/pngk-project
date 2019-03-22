@@ -2,4 +2,6 @@
 
 source lib.sh
 
+log notice  "Enabling SSH"
 systemctl enable ssh
+log notice  "Done enabling SSH"

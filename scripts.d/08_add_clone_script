@@ -3,3 +3,7 @@
 source lib.sh
 log notice "Adding clone script"
 curl -fsSL  https://raw.githubusercontent.com/billw2/rpi-clone/master/rpi-clone > /usr/local/bin/rpi-clone
+log notice "Done adding clone script"
+
+
+

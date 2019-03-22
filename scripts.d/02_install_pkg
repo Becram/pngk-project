@@ -2,6 +2,8 @@
 
 source lib.sh
 
+log notice  "Install packages"
+
 INSTALL_PACKAGES=(
     avahi-daemon vim lshw iotop screen # essentials
     mdadm initramfs-tools rsync # for RAID1
@@ -19,3 +21,5 @@ if [[ ${INSTALL_PACKAGES:-} ]] ; then
     log notice  "Installing ${INSTALL_PACKAGES[*]}"
     _apt install "${INSTALL_PACKAGES[@]}" || log error "Could not install ${INSTALL_PACKAGES[*]}"
 fi
+
+log notice  "Done install packages"
