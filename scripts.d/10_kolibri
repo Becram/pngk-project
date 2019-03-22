@@ -1,3 +1,12 @@
 #!/bin/bash
 
+source lib.sh
 
+pip3 install pip setuptools --upgrade
+pip3 install cffi --upgrade
+
+pip3 install kolibri
+
+kolibri start
+
+log notice "Installed kolibri"

@@ -16,6 +16,7 @@ INSTALL_PACKAGES=(
     curl bzip2 perl #for kiwix
     apache2 #for epaath
     supervisor
+    libffi-dev python3-pip python3-pkg-resources dirmngr  #for kolibri
 )
 
 if [[ ${INSTALL_PACKAGES:-} ]] ; then
