@@ -9,7 +9,7 @@ DOWNLOAD_FILE="https://download.olenepal.org/epaath-new.tar.gz"
 
 mkdir -p /tmp/epaath/
 
-curl "$DOWNLOAD_FILE" | tar -xf - -C /tmp/epaath/
+wget "$DOWNLOAD_FILE" | tar -xf - -C /tmp/epaath/
 
 if [ -f /var/www/html/index.html ]; then 
     rm -f /var/www/html/index.html 

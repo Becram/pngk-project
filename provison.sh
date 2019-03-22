@@ -4,16 +4,16 @@
 
 source lib.sh
 
-missing_deps=()
-for prog in wget apache2 ; do
-    if ! type $prog &>/dev/null ; then
-        missing_deps+=( "$prog" )
-    fi
-done
-if (( ${#missing_deps[@]} > 0 )) ; then
-    die "Missing required programs: ${missing_deps[*]}
-    On Debian/Ubuntu try 'sudo apt install kpartx qemu-user-static parted wget curl jq aria2'"
-fi
+#missing_deps=()
+#for prog in wget apache2 ; do
+#    if ! type $prog &>/dev/null ; then
+#        missing_deps+=( "$prog" )
+#    fi
+#done
+#if (( ${#missing_deps[@]} > 0 )) ; then
+#    die "Missing required programs: ${missing_deps[*]}
+#    On Debian/Ubuntu try 'sudo apt install kpartx qemu-user-static parted wget curl jq aria2'"
+#fi
 
 
 
