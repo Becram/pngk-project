@@ -15,6 +15,7 @@ INSTALL_PACKAGES=(
     net-tools # netstat
     curl bzip2 perl #for kiwix
     apache2 #for epaath
+    supervisor
 )
 
 if [[ ${INSTALL_PACKAGES:-} ]] ; then
