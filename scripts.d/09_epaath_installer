@@ -14,6 +14,7 @@ if [ ! -f epaath-new.tar.gz ]; then
     wget "$DOWNLOAD_FILE" 
 
 fi
+
 tar -xf epaath-new.tar.gz -C /tmp/epaath/
 
 
@@ -21,7 +22,7 @@ if [ -f /var/www/html/index.html ]; then
     rm -f /var/www/html/index.html 
 fi
 
-mv /tmp/epaath /var/www/html/
+mv /tmp/epaath/download_epaath /var/www/html/epaath
 
 chmod -R 775 /var/www
 chown -R www-data:www-data /var/www
