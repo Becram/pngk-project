@@ -1,0 +1,45 @@
+#!/bin/bash
+
+set -eux
+
+# variable declare
+DEBIAN_FRONTEND="noninteractive"
+RUNTIME_PKGS="curl bzip2 perl"
+PKGS_DIR=/packages
+KIWIX_VER=0.9
+ZIM_FILES=/kiwix-data
+LIBRARY_PATH=/library.xml
+
+#apt-get update -qq && apt-get upgrade -y --no-install-recommends && rm -rf /var/lib/apt/lists/*
+apt-get update -qq && apt-get install -y --no-install-recommends -qq ${RUNTIME_PKGS} 
+mkdir -p $PKGS_DIR
+cp -r ./packages/*.bz2  $PKGS_DIR
+
+
+
+if [ -f "$PKGS_DIR"/kiwix-server-0.9-linux-armv5tejl.tar.bz2 ]; then
+    cp -r  "$PKGS_DIR"/kiwix-server-0.9-linux-armv5tejl.tar.bz2 /tmp/
+    pushd /tmp
+    tar -jxf kiwix-server-0.9-linux-armv5tejl.tar.bz2
+    mv /tmp/kiwix* /var/
+    popd
+    echo "${KIWIX_VER}" > /etc/kiwix-version 
+ #   sudo rm -rf /tmp/* && sudo rm -rf /var/lib/apt/lists/* 
+else
+	echo "No kiwix tar file found in $PKGS_DIR "
+fi
+
+
+mkdir -p $ZIM_FILES
+cp -r sample_zims/*.zim  /kiwix-data
+chown -R pi:pi $ZIM_FILES
+chmod -R 775 $ZIM_FILES
+
+# Loop zim files
+for f in "$ZIM_FILES"/*.zim
+do
+  echo  "Adding zim file: $f"
+  /var/kiwix-manage $LIBRARY_PATH add $f
+done
+
+

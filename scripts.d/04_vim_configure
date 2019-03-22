@@ -1,0 +1,5 @@
+#!/bin/bash
+
+source lib.sh
+
+update-alternatives --set editor /usr/bin/vim.basic

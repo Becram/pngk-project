@@ -1,0 +1,21 @@
+#!/bin/bash
+
+source lib.sh
+
+INSTALL_PACKAGES=(
+    avahi-daemon vim lshw iotop screen # essentials
+    mdadm initramfs-tools rsync # for RAID1
+    elinks # text mode web browser
+    dos2unix # for converting dos characters to unix in autorunonce
+    autossh
+    python3-pip python3-dbus
+    jq # for parsing json / treehouses command
+    net-tools # netstat
+    curl bzip2 perl #for kiwix
+    apache2 #for epaath
+)
+
+if [[ ${INSTALL_PACKAGES:-} ]] ; then
+    log notice  "Installing ${INSTALL_PACKAGES[*]}"
+    _apt install "${INSTALL_PACKAGES[@]}" || log error "Could not install ${INSTALL_PACKAGES[*]}"
+fi

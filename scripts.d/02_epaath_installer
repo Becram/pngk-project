@@ -1,0 +1,22 @@
+#!/bin/bash
+
+
+
+#Variables declare
+
+
+DOWNLOAD_FILE="https://download.olenepal.org/epaath-new.tar.gz"
+
+mkdir -p /tmp/epaath/
+
+curl "$DOWNLOAD_FILE" | tar -xf - -C /tmp/epaath/
+
+if [ -f /var/www/html/index.html ]; then 
+    rm -f /var/www/html/index.html 
+fi
+
+mv /tmp/epaath /var/www/html/
+
+chmod -R 775 /var/www
+chown -R www-data:www-data /var/www
+
