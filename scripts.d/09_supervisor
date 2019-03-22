@@ -4,6 +4,6 @@ source lib.sh
 
 
 service supervisor stop
-cp config/kiwix.conf /etc/supervisor/conf.d/
+cp config/*.conf /etc/supervisor/conf.d/
 service supervisor start
 log notice "Done configure supervisor"
