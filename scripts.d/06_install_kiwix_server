@@ -1,9 +1,10 @@
 #!/bin/bash
 
+source lib.sh
+
 log notice  "Installing Kiwix"
 
 # variable declare
-DEBIAN_FRONTEND="noninteractive"
 PKGS_DIR=/packages
 KIWIX_VER=0.9
 ZIM_FILES=/kiwix-data
