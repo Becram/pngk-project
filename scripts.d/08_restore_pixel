@@ -1,0 +1,8 @@
+#!/bin/bash
+
+source lib.sh
+cp -r config/restore /usr/local/bin/
+
+log notice "Pixel retore script added"
+
+

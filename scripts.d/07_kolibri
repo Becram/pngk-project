@@ -1,12 +1,14 @@
 #!/bin/bash
 
 source lib.sh
+curl -o kolibri -L http://pantry.learningequality.org/downloads/kolibri/v0.12.1/kolibri-0.12.1.pex
+mv kolibri /usr/local/bin/
 
-pip3 install pip setuptools --upgrade
-#pip3 install cffi --upgrade
+cp -r config/kolibri.service /usr/lib/systemd/system/
+mkdir -p /home/pi/.kolibri
 
-pip3 install kolibri
+sytemctl start kolibri.service
+sytemctl enable kolibri.service
 
-kolibri start
 
 log notice "Installed kolibri"

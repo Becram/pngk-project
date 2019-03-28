@@ -1,0 +1,12 @@
+[Unit]
+Description=Kolibri
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/usr/local/bin/kolibri start 
+ExecStop=/usr/local/bin/kolibri stop 
+User=pi
+
+[Install]
+WantedBy=multi-user.target

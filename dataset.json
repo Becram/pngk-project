@@ -10,7 +10,7 @@
             "Wikipedia": {
                 "NAME": "Wikipedia",
                 "DESCRIPTION": "Wikipedia is a free online encyclopedia, created and edited by volunteers around the world and hosted by the Wikimedia Foundation",
-                "COMMAND": "chromium-browser http://localhost:81/wikipedia_ne_all_novid",
+                "COMMAND": "chromium-browser http://localhost:8181/wikipedia_ne_all_novid_2019-3/",
                 "ICON": "/usr/share/icons/Wikipedia.png",
                 "CATAGORY": "Education"
               },

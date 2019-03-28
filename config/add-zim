@@ -1,0 +1,20 @@
+#!/bin/bash
+
+
+
+# variable declare
+ZIM_FILES=/kiwix-data
+LIBRARY_PATH=/library.xml
+
+chown -R pi:pi $ZIM_FILES
+chmod -R 775 $ZIM_FILES
+
+# Loop zim files
+for f in "$ZIM_FILES"/*.zim
+do
+  echo  "Adding zim file: $f"
+  /var/kiwix-manage $LIBRARY_PATH add $f
+done
+
+echo "Done installing Kiwix"
+

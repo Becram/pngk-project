@@ -1,0 +1,4 @@
+#!/bin/bash
+rm -r /home/pi/.config/lxpanel
+service lightdm restart
+exit 0

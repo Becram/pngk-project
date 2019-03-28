@@ -1,0 +1,9 @@
+#!/bin/bash
+
+source lib.sh
+
+echo "dtoverlay=pi3-disable-bt" | tee -a /boot/config.txt
+
+systemctl disable hciuart
+
+log notice "Removed BLuetooth service"
