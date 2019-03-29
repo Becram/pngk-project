@@ -28,30 +28,30 @@ USAGE:
 ```
 Repo Description.
 The ``provision`` script will call the multiple scripts localted inside the scripts.d directory functions of which is explained below.
-> i. ``00_update_pkg:`` This will upgrade the Raspberry Pi
+i. ``00_update_pkg:`` This will upgrade the Raspberry Pi
 
-> ii. ``01_install_pkg:`` Install important packages as libreoffice,stellerium and many   other packages
+ii. ``01_install_pkg:`` Install important packages as libreoffice,stellerium and many   other packages
 
-> iii. ``02_create_launcher:`` This script will create the launchers for the application we will be installing. It will create launcher's in Education category in main menu for EPaath, Khan Academy, PheT, Wikipedia.
+iii. ``02_create_launcher:`` This script will create the launchers for the application we will be installing. It will create launcher's in Education category in main menu for EPaath, Khan Academy, PheT, Wikipedia.
 In order to create launcher populate the <dataset.js> file with relevent data to create the launcher automatically.
 
-> iv. ``03_enable_ssh:`` SSH is diabled by default in Raspbian this will enable it.
+iv. ``03_enable_ssh:`` SSH is diabled by default in Raspbian this will enable it.
 
-> v. ``04_vim_configure:`` Configure vim
+v. ``04_vim_configure:`` Configure vim
 
-> vi. ``05_disable_swap:`` Swap uses sd card as RAM which reduces SD card life so it needs to de disabled
+vi. ``05_disable_swap:`` Swap uses sd card as RAM which reduces SD card life so it needs to de disabled
 
-> vii. ``06_install_kiwix_server:`` Installs kiwix server which serves zim file as wikipedia. This script also creates the supervisor service for kiwix. Kiwix service can be configured by going to localhost:9001 with username:pngk and password:pngk.
+vii. ``06_install_kiwix_server:`` Installs kiwix server which serves zim file as wikipedia. This script also creates the supervisor service for kiwix. Kiwix service can be configured by going to localhost:9001 with username:pngk and password:pngk.
 Kiwix server serves zim files from the directory /kiwix-data.
 
 You may also add zim files in /kiwix-data and run ``sudo add-zim`` to add other zim files.
 
-> viii. ``07_kolibri:`` Script to install kolibri and create systemd service. Kolibri is used to to serve the Khan Academy (20 GB) and Phet Simulation(~500 MB) Activity.
+viii. ``07_kolibri:`` Script to install kolibri and create systemd service. Kolibri is used to to serve the Khan Academy (20 GB) and Phet Simulation(~500 MB) Activity.
 
-> ix. ``08_restore_pixel:`` Some times students mistakenly might delete menubar which is ver hard to restore for non techies, so this script will add a script to restore the panel. Just run ``sudo restore`` in terminal to retore the panel.
+ix. ``08_restore_pixel:`` Some times students mistakenly might delete menubar which is ver hard to restore for non techies, so this script will add a script to restore the panel. Just run ``sudo restore`` in terminal to retore the panel.
 
-> x. ``09_supervisor:`` Configure supervisor to access the kiwix server service.
+x. ``09_supervisor:`` Configure supervisor to access the kiwix server service.
 
-> xi. ``10_disable_bluetooth`` Since we wont be needing the bluetooth we disable it.
+xi. ``10_disable_bluetooth`` Since we wont be needing the bluetooth we disable it.
 
 ### NB. Though provision script runs all scripts you may also run individual one by one,
