@@ -1,4 +1,6 @@
 # Raspbian Customization
+#### Author : Bikram Dhoju [bikramdhoju.com.np]
+
 ### 1. Configure keyboard to US and locale to english as:
 Edit /etc/default/locale and set the contents to:
 ```
