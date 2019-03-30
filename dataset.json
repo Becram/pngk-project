@@ -10,21 +10,21 @@
             "Wikipedia": {
                 "NAME": "Wikipedia",
                 "DESCRIPTION": "Wikipedia is a free online encyclopedia, created and edited by volunteers around the world and hosted by the Wikimedia Foundation",
-                "COMMAND": "chromium-browser http://localhost:8181/wikipedia_ne_all_novid_2019-3/",
+                "COMMAND": "chromium-browser http://localhost:8181/wikipedia_ne_all_novid_2019-03/",
                 "ICON": "/usr/share/icons/Wikipedia.png",
                 "CATAGORY": "Education"
               },
-            "Kolibri": {
-                "NAME": "Kolibri",
-                "DESCRIPTION": "Kolibri is specially designed to provide offline access to a curated and openly licensed educational content library",
-                "COMMAND": "chromium-browser http://localhost:82",
-                "ICON": "/usr/share/icons/Kolibri.png",
+            "Khan_Academy": {
+                "NAME": "Khan Acadmey",
+                "DESCRIPTION": "Khan Academy is a non-profit educational organization created in 2008 by Salman Khan with the goal of creating a set of online tools that help educate students. The organization produces short lessons in the form of videos.",
+                "COMMAND": "chromium-browser http://localhost:8080/learn/#/topics/1ceff53605e55bef987d88e0908658c5",
+                "ICON": "/usr/share/icons/khanacademy.png",
                 "CATAGORY": "Education"
               },
             "PhET": {
                 "NAME": "PhET",
                 "DESCRIPTION": "PhET provides fun, free, interactive, research-based science and mathematics simulations. We extensively test and evaluate each simulation to ensure educational effectiveness. These tests include student interviews and observation of simulation use in classrooms. The simulations are written in Java, Flash or HTML5, and can be run online or downloaded to your computer.",
-                "COMMAND": "chromium-browser http://http://localhost:8080/learn/#/topics/197934f144305350b5820c7c4dd8e194",
+                "COMMAND": "chromium-browser http://localhost:8080/learn/#/topics/197934f144305350b5820c7c4dd8e194",
                 "ICON": "/usr/share/icons/phet.png",
                 "CATAGORY": "Education"
               }
